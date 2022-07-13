@@ -9,7 +9,7 @@ import java.io.PrintWriter;
 
 	@WebServlet(name = "CountServlet", urlPatterns = "/count")
 	public class CountServlet extends HttpServlet {
-		int hitCount = 0;
+		private int hitCount = 0;
 		@Override
 		protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 			String reset = req.getParameter("reset");
