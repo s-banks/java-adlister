@@ -1,0 +1,1 @@
+<p>Like many feet, this footer stinks</p>
