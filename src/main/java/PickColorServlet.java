@@ -15,7 +15,6 @@ protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IO
 	String color = req.getParameter("color");
 	if (color != "") {
 		System.out.println(color);
-//		res.sendRedirect("/viewcolor");
 		req.setAttribute("color", color);
 	req.getRequestDispatcher("/WEB-INF/viewcolor.jsp").forward(req, res);
 	} else {
