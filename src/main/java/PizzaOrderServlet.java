@@ -16,8 +16,10 @@ public class PizzaOrderServlet extends HttpServlet {
 		System.out.println(req.getParameter("sauce"));
 		System.out.println(req.getParameter("size"));
 		String[] toppings = req.getParameterValues("toppings");
-		for (String str : toppings) {
-			System.out.println(str);
+		if (toppings != null) {
+			for (String str : toppings) {
+				System.out.println(str);
+			}
 		}
 		System.out.println(req.getParameter("address"));
 	}
