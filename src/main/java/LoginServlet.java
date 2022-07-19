@@ -20,9 +20,9 @@ public class LoginServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         HttpSession session = request.getSession();
-        session.setAttribute("user", username);
             boolean validAttempt = username.equals("admin") && password.equals("password");
             if (validAttempt) {
+                session.setAttribute("user", username);
                 response.sendRedirect("/profile");
             } else {
                 response.sendRedirect("/login");
