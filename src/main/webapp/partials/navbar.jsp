@@ -6,11 +6,11 @@
             <a class="navbar-brand" href="/">Adlister Home</a>
             <ul class="nav navbar-nav navbar-left">
                 <li><a href="/ads">Ads</a> </li>
-                <li class="logout" style=display:none><a href="/profile">Profile</a></li>
             </ul>
         </div>
         <ul class="nav navbar-nav navbar-right">
             <li class="login"><a href="/login">Login</a></li>
+            <li class="logout" style=display:none><a href="/profile">Profile</a></li>
             <li class="logout" style=display:none><a href="/logout">Logout</a> </li>
         </ul>
         <c:if test="${user != null && user != ' there'}">
