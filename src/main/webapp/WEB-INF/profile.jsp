@@ -1,3 +1,4 @@
+<%@ page import="static java.awt.SystemColor.text" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -12,8 +13,5 @@
         <h1>Hello, ${user}</h1>
 
     </div>
-    <script>
-		document.querySelector("#logout").style.display = "block";
-    </script>
 </body>
 </html>

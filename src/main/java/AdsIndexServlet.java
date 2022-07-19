@@ -14,13 +14,13 @@ public class AdsIndexServlet extends HttpServlet {
         Ads adsDao = DaoFactory.getAdsDao();
         List<Ad> ads = adsDao.all();
         String username;
-        if (session.getAttribute("username") == null) {
+        if (session.getAttribute("user") == null) {
             username = " there";
         } else {
-            username = ", " + session.getAttribute("username");
+            username = ", " + session.getAttribute("user");
         }
         request.setAttribute("ads", DaoFactory.getAdsDao().all());
-        request.setAttribute("username", username);
+        request.setAttribute("user", username);
         request.getRequestDispatcher("/ads/index.jsp").forward(request, response);
     }
 }
