@@ -13,8 +13,8 @@ public class ViewProfileServlet extends HttpServlet {
         request.setAttribute("user", session.getAttribute("user"));
         if (session.getAttribute("user") == null) {
             response.sendRedirect("/login");
-            return;
-        }
+        } else {
             request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
+        }
     }
 }
