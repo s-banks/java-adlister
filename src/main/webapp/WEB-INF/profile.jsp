@@ -10,8 +10,8 @@
     <jsp:include page="../partials/navbar.jsp" />
 
     <div class="container">
-        <h1>Hello, ${user}</h1>
-
+        <h1>Hello, ${user}.</h1>
+        <p> Do/see profile things here</p>
     </div>
 </body>
 </html>
