@@ -7,13 +7,14 @@ public class AlbumsDao {
 	private Connection connection = null;
 	public AlbumsDao() {
 		try {
+			Config config - new Config();
 			//Step one, register driver
 			DriverManager.registerDriver(new Driver());
 			//step 2, create connection
 			connection = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/codeup_test_db?allowPublicKeyRetrieval=true&useSSL=false",
-					"root",
-					"codeup"
+					config.getUrl(),
+					config.getUser(),
+					config.getPassword()
 			);
 		} catch (SQLException e) {
 			throw new RuntimeException("Error connecting to database", e);
