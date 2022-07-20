@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXIST users;
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     username VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
-    password VARCHAR(16) NOT NULL,
+    password VARCHAR(100) NOT NULL,
     PRIMARY KEY (id),
     UNIQUE (username, email)
 )
@@ -15,10 +15,9 @@ DROP TABLE IF EXIST ads;
 CREATE TABLE IF NOT EXIST ads;
 (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    user_id INT,
+    user_id INT UNSIGNED NOT NULL,
     title VARCHAR(100) NOT NULL,
-    description VARChAR(250) NOT NULL,
+    description VARCHAR(250) NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (user_id) REFERENCES users(id),
-    UNIQUE (title)
+    FOREIGN KEY (user_id) REFERENCES users(id)
 )
