@@ -7,7 +7,7 @@ public class AlbumsDao {
 	private Connection connection = null;
 	public AlbumsDao() {
 		try {
-			Config config - new Config();
+			Config config = new Config();
 			//Step one, register driver
 			DriverManager.registerDriver(new Driver());
 			//step 2, create connection
