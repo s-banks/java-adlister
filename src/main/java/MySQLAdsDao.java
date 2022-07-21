@@ -1,5 +1,4 @@
 import com.mysql.cj.jdbc.Driver;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +33,7 @@ public class MySQLAdsDao implements Ads {
 						rs.getString("description")
 				));
 			}
-			return null;
+			return ads;
 		} catch (SQLException e) {
 			throw new RuntimeException("Error connecting to database", e);
 		}
