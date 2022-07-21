@@ -33,5 +33,6 @@ public class LoginServlet extends HttpServlet {
         } else {
             response.sendRedirect("/login");
         }
+        return validAttempt;
     }
 }
