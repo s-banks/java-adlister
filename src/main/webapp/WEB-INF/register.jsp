@@ -26,7 +26,7 @@
     }
 %>
 
-<form action="/register" method="post">
+<form action="/register" method="post" style="margin-left: 20px;">
     <label for="username">User Name:</label><br>
     <input type="text" id="username" name="username"><br>
     <br>
