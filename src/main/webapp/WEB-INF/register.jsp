@@ -1,4 +1,4 @@
-<%--
+<%@ page import="java.io.PrintWriter" %><%--
   Created by IntelliJ IDEA.
   User: Shane
   Date: 7/21/22
@@ -15,6 +15,17 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+
+
+<%    String msg;
+    if(session.getAttribute("msg")!=null){
+        response.setContentType("text/html");
+        PrintWriter output = response.getWriter();
+        msg= (String)session.getAttribute("msg");
+        output.print("<p style='color:red;'> "+msg+" </p>");
+    }
+%>
+
 <form action="/register" method="post">
     <label for="username">User Name:</label><br>
     <input type="text" id="username" name="username"><br>
