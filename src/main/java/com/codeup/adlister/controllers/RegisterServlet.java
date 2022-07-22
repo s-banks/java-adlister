@@ -24,12 +24,9 @@ public class RegisterServlet extends HttpServlet {
         String username = request.getParameter("username");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
-
         boolean isNotBlank = !username.isEmpty() && !email.isEmpty() && !password.isEmpty();
-
         User userCk = DaoFactory.getUsersDao().findByUsername(username);
-        boolean userExists = userCk.getUsername() != null;
-        if (isNotBlank && !userExists)   {
+        if (isNotBlank && userCk == null) {
             User user = new User(
                     username,
                     email,

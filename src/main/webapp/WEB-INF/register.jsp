@@ -15,15 +15,17 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-
 <form action="/register" method="post">
     <label for="username">User Name:</label><br>
     <input type="text" id="username" name="username"><br>
+    <br>
     <label for="email">Email Address:</label><br>
     <input type="text" id="email" name="email">
+    <br>
     <label for="password">Password:</label><br>
     <input type="text" id="password" name="password"><br>
+    <br>
+    <input type="submit" value="Submit">
 </form>
-
 </body>
 </html>
