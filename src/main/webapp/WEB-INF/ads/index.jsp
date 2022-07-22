@@ -8,8 +8,9 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-<H1>Welcome! Here are the ads:</H1>
-<h2>${user}</h2>
+<H1>Welcome, <c:out value="${user}" />!</H1>
+<br>
+  <H2> Here are the ads:</H2>
 <div class="container">
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
