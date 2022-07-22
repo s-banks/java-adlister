@@ -3,6 +3,10 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <a class="navbar-brand" href="/ads">Adlister</a>
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="/ads">Ads</a> </li>
+            </ul>
+
 
         </div>
         <ul class="nav navbar-nav navbar-right">
